@@ -8,10 +8,11 @@ import React from 'react';
 import '../css/Dash.css';
 
 class DashComponent extends React.Component {
-    componentDidMount() {
-        // TODO: check if authentication has happened
-        // TODO: query API for data
-        console.log(this.props.token);
+    componentWillMount() {
+        // if either one is missing, redirect
+        if (!this.props.username || !this.props.token) {
+            window.location.href = '/login';
+        }
     }
 
     render() {
