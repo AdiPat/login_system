@@ -19,6 +19,7 @@ def get_user_table():
 
 # Read data from file/db
 user_table = get_user_table()
+token_table = {}
 
 
 def get_password(username):
@@ -49,17 +50,24 @@ def get_token(username, password):
     token = jwt.encode(payload, key, algorithm='HS256')
     # Convert bytes to string
     token = token.decode('utf-8')
+    # Store token
+    store_token(token)
     return token
 
 
-def store_token(username, token):
+def store_token(token):
     """Stores login token for a user."""
-    pass
+    status = False
+    if token_table.get(token) == None:
+        token_table[token] = True
+        status = True
+    return status
 
 
 def is_token_valid(username, token):
     """Returns true if token is valid"""
-    return True
+    flag = token_table.get(token)
+    return bool(flag)
 
 
 def get_data(username, token):
@@ -69,4 +77,5 @@ def get_data(username, token):
     data = None
     if user:
         data = user['data']
+    print("\n\nget_data()", user)
     return data
