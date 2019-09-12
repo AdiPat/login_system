@@ -32,7 +32,7 @@ class App extends React.Component {
                 token: token,
             });
         }
-        console.log(username, token);
+        console.log('sessionStorage: (username,token)', username, token);
     }
 
     /**
@@ -48,8 +48,8 @@ class App extends React.Component {
         });
 
         // store data in sessionStorage
-        sessionStorage.setItem('username', this.state.username);
-        sessionStorage.setItem('token', this.state.token);
+        sessionStorage.setItem('username', username);
+        sessionStorage.setItem('token', token);
         // Sanity check to check if token is set
         if (this.state.token === token) return true;
         return false;
