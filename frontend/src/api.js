@@ -65,7 +65,7 @@ export function apiHello(username, token) {
  * @param {token} token
  * @returns {boolean}
  */
-export async function apiData(username, token) {
+export function apiData(username, token) {
     let URL = 'http://localhost:5000/data';
     const args = {
         username: username,
@@ -77,6 +77,7 @@ export async function apiData(username, token) {
     $.ajax({
         type: 'GET',
         url: URL,
+        async: false,
         data: args,
         success: response => {
             console.log(response);
