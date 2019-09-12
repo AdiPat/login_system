@@ -10,6 +10,10 @@ import '../css/Login.css';
 class LoginComponent extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            username: '',
+            password: '',
+        };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -37,7 +41,14 @@ class LoginComponent extends React.Component {
                             <label>Username</label>
                             <span className="login-form_icon">Icon</span>
                         </div>
-                        <input type="text" placeholder="johndoe"></input>
+                        <input
+                            value={this.state.username}
+                            onChange={e =>
+                                this.setState({ username: e.target.value })
+                            }
+                            type="text"
+                            placeholder="johndoe"
+                        ></input>
                         <div className="login-form_message">Input is valid</div>
                     </div>
                     <div className="login-form_element">
@@ -45,7 +56,13 @@ class LoginComponent extends React.Component {
                             <label>Password</label>
                             <span className="login-form_icon">Icon</span>
                         </div>
-                        <input type="password"></input>
+                        <input
+                            value={this.state.password}
+                            onChange={e => {
+                                this.setState({ password: e.target.value });
+                            }}
+                            type="password"
+                        ></input>
                         <div className="login-form_message">
                             Password is valid
                         </div>
