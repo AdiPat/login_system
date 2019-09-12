@@ -35,6 +35,14 @@ class App extends React.Component {
         console.log('sessionStorage: (username,token)', username, token);
     }
 
+    onLogout() {
+        // clear session storage
+        sessionStorage.removeItem('username');
+        sessionStorage.removeItem('token');
+        // redirect to home
+        window.location.href = '/';
+    }
+
     /**
      *
      * @param {string} token Token string received from server
@@ -69,6 +77,7 @@ class App extends React.Component {
                     <button>
                         <Link to="/login">Login</Link>
                     </button>
+                    <button onClick={this.onLogout}>Logout</button>
                 </div>
                 <Route
                     path="/login"
