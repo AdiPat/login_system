@@ -30,7 +30,7 @@ class LoginComponent extends React.Component {
         // TODO: redirect to dash properly
         if (token && flag) {
             this.props.setToken(this.state.username, token);
-            //window.location.href = '/dash';
+            window.location.href = '/dash';
         }
     }
 
