@@ -28,22 +28,24 @@ class App extends React.Component {
      * @returns {boolean}
      *
      */
-    setToken(token) {
+    setToken(username, token) {
         this.setState({
+            username: username,
             token: token,
         });
+
         // Sanity check to check if token is set
         if (this.state.token === token) return true;
         return false;
     }
 
     render() {
+        console.log('Re-rendering App!', this.state);
         let data = null;
         if (this.state.token) {
-            // get data
             data = apiData(this.state.username, this.state.token);
+            console.log(data);
         }
-
         return (
             <Router>
                 <div className="app-header">
