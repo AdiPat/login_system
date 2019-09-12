@@ -9,6 +9,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import LoginComponent from './components/LoginComponent';
 import DashComponent from './components/DashComponent';
+import { apiData } from './api';
 
 class App extends React.Component {
     constructor(props) {
@@ -37,6 +38,12 @@ class App extends React.Component {
     }
 
     render() {
+        let data = null;
+        if (this.state.token) {
+            // get data
+            data = apiData(this.state.username, this.state.token);
+        }
+
         return (
             <Router>
                 <div className="app-header">
@@ -57,6 +64,7 @@ class App extends React.Component {
                         <DashComponent
                             token={this.state.token}
                             username={this.state.username}
+                            data={data}
                         />
                     )}
                 ></Route>

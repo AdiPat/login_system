@@ -15,7 +15,7 @@ class DashComponent extends React.Component {
     }
 
     render() {
-        let dummyImage = 'https://dummyimage.com/600x400/000/fff';
+        let dummyImage = this.props.data;
         // TODO: Get image from API
 
         return (
