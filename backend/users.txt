@@ -1,0 +1,3 @@
+rocky rocky@123 http://lorempixel.com/400/400/cats/1/
+sparky sparkyissmart http://lorempixel.com/400/400/cats/2/
+codemonk ilovecoding@123 http://lorempixel.com/400/400/cats/3/

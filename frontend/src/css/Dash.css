@@ -1,0 +1,36 @@
+.dash {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin: 1.6rem;
+    /* Testing */
+    border: 1px solid;
+}
+
+.dash-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    padding: 1rem;
+    /* Testing */
+    border: 1px solid;
+}
+
+.dash-data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    padding: 1rem;
+    /* Testing */
+    border: 1px solid;
+}
+
+.image-responsive {
+    max-width: 100%;
+    height: auto;
+}

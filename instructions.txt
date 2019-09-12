@@ -1,0 +1,44 @@
+Before starting take a look to:
+http://playbook.serendeepia.com/2-1-hiring#home-assigment
+
+This exercise is an easy signing-in process. You will to developed the 
+front-end and the back-end. You need to fullfil the next requirements:
+- you can do the front-end for web or mobile (Android or iOS)
+- the back-end must be written in kotlin, java, swift, ruby or python.
+- there will be 2 front-end views: the signing-in form and the logged-in view
+- the logged-in view must be only visible when the user has been logged-in
+- the signing-in form must ask for an username and a password
+- the back-end must have a REST API with 2 methods:
+  - login (POST): that will check the user and password and return an authentication
+    token
+  - hello (GET): that will return true if the authentication token is valid
+- the authentication token must be saved in the client side when the user has
+  signed-in before
+- the user and password can be hardoced in the backend code or read from an
+  external source (a file or a database for example).
+- for the authentication token you can use https://jwt.io/, if you use 
+  something else you must include a small description of what have you done
+
+The goal of this exercise is to see your technical and communication skills.
+When you reply with the results please include any documentation and code
+necessary to understand and replicate your results. You should not spend
+too much time making the front-end more beautiful or making the backend 
+faster, we are more interested in the process you followed and that the
+final result satisfy the requirements.
+
+You must return a zip file that must contain a README.txt file describing 
+what you send to us and an ANSWERS.txt with your answers to these questions:
+
+- How long did you spend on the homework test?
+- What would you add to your solution if you had more time? If you did not
+spend much time on the assignment, then use this as an opportunity to explain
+what you would add.
+- Which parts did you spend the most time with?
+- How did you find the test overall?
+- Among all the Deep Learning areas which one do you think will have more 
+impact on the business in the next years and why?
+
+You must use English for the answers and any documentation you create.
+
+Once finished, send the solution to careers@serendeepia.com with your name
+and the position as the subject of the email.

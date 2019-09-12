@@ -1,0 +1,19 @@
+TODO LIST
+
+/frontend
+App.js - setToken(): Check if token is valid
+App.js - If token is found, redirect to dash
+LoginComponent.js - handleSubmit() Validate input
+LoginComponent.js - handleSubmit() Get token from API
+LoginComponent.js - Bind inputs to state
+LoginComponent.js - Redirect to dash without reloading the app, it destroys the token
+LoginComponent.js - Add onChange() to update validation
+LoginComponent.js - Display message in 'login-form_message' for invalid input
+DashComponent.js - Use token, username to query data from API
+DashComponent.js - Store queried data in state
+
+/backend
+- Check if token is valid to validate credentials
+- Add timestamp to make token unique
+- Store hashed passwords
+
