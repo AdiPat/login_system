@@ -65,6 +65,8 @@ def is_token_valid(username, token):
 def get_data(username, token):
     """Returns user data from table."""
     # check if username exists
-    user = user_table[username]
-    data = user['data']
+    user = user_table.get(username)
+    data = None
+    if user:
+        data = user['data']
     return data
