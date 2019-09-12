@@ -6,7 +6,7 @@
 
 import React from 'react';
 import '../css/Login.css';
-import { apiLogin } from '../api';
+import { apiLogin, apiHello } from '../api';
 
 class LoginComponent extends React.Component {
     constructor(props) {
@@ -23,13 +23,14 @@ class LoginComponent extends React.Component {
 
         // TODO: validate input
         // flag = isInputValid();
-        let flag = true;
         // TODO: Replace with token obtained from API
-        let dummyToken = apiLogin(this.state.username, this.state.password);
+        let token = apiLogin(this.state.username, this.state.password);
+        let flag = apiHello(this.state.username, token);
+
         // TODO: redirect to dash properly
-        if (dummyToken) {
-            this.props.setToken(dummyToken);
-            window.location.href = '/dash';
+        if (token && flag) {
+            this.props.setToken(token);
+            //window.location.href = '/dash';
         }
     }
 
