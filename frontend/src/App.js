@@ -22,6 +22,19 @@ class App extends React.Component {
         this.setToken = this.setToken.bind(this);
     }
 
+    componentDidMount() {
+        // check if sessionStorage already has login data
+        let username = sessionStorage.getItem('username');
+        let token = sessionStorage.getItem('token');
+        if (username && token) {
+            this.setState({
+                username: username,
+                token: token,
+            });
+        }
+        console.log(username, token);
+    }
+
     /**
      *
      * @param {string} token Token string received from server
@@ -34,6 +47,9 @@ class App extends React.Component {
             token: token,
         });
 
+        // store data in sessionStorage
+        sessionStorage.setItem('username', this.state.username);
+        sessionStorage.setItem('token', this.state.token);
         // Sanity check to check if token is set
         if (this.state.token === token) return true;
         return false;
