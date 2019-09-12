@@ -6,25 +6,25 @@ import $ from 'jquery';
  * @param {password} string
  * @returns {boolean}
  */
-export async function apiLogin(username, password) {
+export function apiLogin(username, password) {
     let URL = 'http://localhost:5000/login';
     const postBody = {
         username: username,
         password: password,
     };
 
-    let token = 'Dummy';
-    // TODO: Update token
+    let token = null;
     $.ajax({
         type: 'POST',
         url: URL,
         data: postBody,
+        async: false,
         success: response => {
             console.log(response);
+            token = response.token;
         },
+        error: error => console.log(error),
     });
-
-    // const data = rawResponse.json();
     return token;
 }
 
@@ -34,22 +34,25 @@ export async function apiLogin(username, password) {
  * @param {token} string
  * @returns {boolean}
  */
-export async function apiHello(username, token) {
+export function apiHello(username, token) {
     let URL = 'http://localhost:5000/hello';
-    const postBody = {
+    const args = {
         username: username,
         token: token,
     };
 
-    let status = true;
+    let status = false;
 
     $.ajax({
-        type: 'POST',
+        type: 'GET',
         url: URL,
-        data: postBody,
+        async: false,
+        data: args,
         success: response => {
             console.log(response);
+            status = response.status;
         },
+        error: error => console.log(error),
     });
 
     // const data = rawResponse.json();
@@ -64,22 +67,25 @@ export async function apiHello(username, token) {
  */
 export async function apiData(username, token) {
     let URL = 'http://localhost:5000/data';
-    const postBody = {
+    const args = {
         username: username,
         token: token,
     };
 
-    let data = 'url';
+    let data = null;
     // TODO: Update URL
     $.ajax({
-        type: 'POST',
+        type: 'GET',
         url: URL,
-        data: postBody,
+        data: args,
         success: response => {
             console.log(response);
+            data = response.data;
+        },
+        error: error => {
+            console.log(error);
         },
     });
 
-    // const data = rawResponse.json();
     return data;
 }
