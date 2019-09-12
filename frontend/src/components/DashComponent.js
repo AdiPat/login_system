@@ -8,10 +8,15 @@ import React from 'react';
 import '../css/Dash.css';
 
 class DashComponent extends React.Component {
+    constructor(props) {
+        super(props);
+        this.componentWillMount = this.componentWillMount.bind(this);
+    }
     componentWillMount() {
         // if either one is missing, redirect
+        console.log(this.props.username, this.props.token);
         if (!this.props.username || !this.props.token) {
-            window.location.href = '/login';
+            //window.location.href = '/login';
         }
     }
 
