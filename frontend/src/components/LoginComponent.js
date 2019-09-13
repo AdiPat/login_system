@@ -18,16 +18,16 @@ class LoginComponent extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    /**
+     * Authenticates username and password and receives token from server.
+     * @param {e} Event Event reference after onClick()
+     *
+     */
     handleSubmit(e) {
         e.preventDefault();
-
-        // TODO: validate input
-        // flag = isInputValid();
-        // TODO: Replace with token obtained from API
         let token = apiLogin(this.state.username, this.state.password);
         let flag = apiHello(this.state.username, token);
 
-        // TODO: redirect to dash properly
         if (token && flag) {
             this.props.setToken(this.state.username, token);
             window.location.href = '/dash';

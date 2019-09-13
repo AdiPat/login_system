@@ -45,7 +45,7 @@ class App extends React.Component {
     }
 
     /**
-     *
+     * Sets login token received from server in app state.
      * @param {string} token Token string received from server
      * @returns {boolean}
      *
