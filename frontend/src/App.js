@@ -6,6 +6,7 @@
 
 import React from 'react';
 import './App.css';
+import './css/Button.css';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import LoginComponent from './components/LoginComponent';
 import DashComponent from './components/DashComponent';
@@ -73,11 +74,17 @@ class App extends React.Component {
         return (
             <Router>
                 <div className="app-header">
-                    <h1>Welcome to Serendeepia!</h1>
-                    <button>
+                    <h1>Welcome to SimplyLogin</h1>
+                    <button className="btn-basic">
                         <Link to="/login">Login</Link>
                     </button>
-                    <button onClick={this.onLogout}>Logout</button>
+                    <button
+                        className="btn-basic"
+                        onClick={this.onLogout}
+                        disabled={this.state.token == null}
+                    >
+                        Logout
+                    </button>
                 </div>
                 <Route
                     path="/login"

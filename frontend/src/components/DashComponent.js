@@ -35,11 +35,10 @@ class DashComponent extends React.Component {
                         className="image-responsive"
                         src={dummyImage}
                         height="400"
-                        width="600"
+                        width="400"
                         alt="Your pet for today"
                     ></img>
                 </div>
-                <button>Logout</button>
             </div>
         );
     }

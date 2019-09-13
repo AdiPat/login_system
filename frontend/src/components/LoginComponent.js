@@ -41,7 +41,7 @@ class LoginComponent extends React.Component {
                     <div className="login-form_element">
                         <div className="login-form_label">
                             <label>Username</label>
-                            <span className="login-form_icon">Icon</span>
+                            <span className="login-form_icon"></span>
                         </div>
                         <input
                             value={this.state.username}
@@ -51,12 +51,12 @@ class LoginComponent extends React.Component {
                             type="text"
                             placeholder="johndoe"
                         ></input>
-                        <div className="login-form_message">Input is valid</div>
+                        {/* <div className="login-form_message">Input is valid</div> */}
                     </div>
                     <div className="login-form_element">
                         <div className="login-form_label">
                             <label>Password</label>
-                            <span className="login-form_icon">Icon</span>
+                            <span className="login-form_icon"></span>
                         </div>
                         <input
                             value={this.state.password}
@@ -66,10 +66,10 @@ class LoginComponent extends React.Component {
                             type="password"
                         ></input>
                         <div className="login-form_message">
-                            Password is valid
+                            {/* Password is valid */}
                         </div>
                     </div>
-                    <button>Submit</button>
+                    <button className="btn-basic">Submit</button>
                 </form>
             </div>
         );
