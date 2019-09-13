@@ -4,8 +4,6 @@
     align-items: center;
     margin: 1rem;
     padding: 1rem;
-    /* Testing */
-    border: 1px solid;
 }
 
 .login-form {
@@ -13,9 +11,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
-    /* Testing */
-    border: 1px solid;
+    padding: 2rem;
+    background-color: brown;
+    border-radius: 5px;
+    border: 2px solid white;
 }
 
 .login-form_element {
@@ -24,9 +23,9 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 1rem;
-    padding: 1rem;
-    /* Testing */
-    border: 1px solid;
+    padding: 1rem 1.8rem 1rem 1.8rem;
+    border-radius: 0.5rem;
+    background-color: white;
 }
 
 .login-form_label {
@@ -34,17 +33,29 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    /* Testing */
-    border: 1px solid;
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
 }
 
 .login-form_label label {
     text-transform: uppercase;
-    /* Testing */
-    border: 1px solid;
+}
+
+.login-form_message {
+    font-size: 1.4rem;
+    font-weight: 600;
 }
 
 .login-form_icon {
     /* Testing */
-    border: 1px solid;
+}
+
+input[type='text'],
+input[type='password'] {
+    width: 100%;
+    padding: 1.2rem;
+    margin: 1rem 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }

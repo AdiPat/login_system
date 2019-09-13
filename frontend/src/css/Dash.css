@@ -5,8 +5,6 @@
     align-items: center;
     padding: 1rem;
     margin: 1.6rem;
-    /* Testing */
-    border: 1px solid;
 }
 
 .dash-header {
@@ -16,8 +14,10 @@
     align-items: center;
     width: 75%;
     padding: 1rem;
-    /* Testing */
-    border: 1px solid;
+    border: 2px solid white;
+    background-color: brown;
+    color: white;
+    font-size: 1.6rem;
 }
 
 .dash-data {
@@ -26,8 +26,8 @@
     align-items: center;
     width: 75%;
     padding: 1rem;
-    /* Testing */
-    border: 1px solid;
+    background-color: brown;
+    border: 2px solid white;
 }
 
 .image-responsive {

@@ -1,0 +1,32 @@
+/** Buttons **/
+
+.btn-basic {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.4rem;
+    padding: 1rem 1.6rem 1rem 1.6rem;
+    margin: 1rem 0 0 0;
+    text-transform: uppercase;
+    border-radius: 2.6rem;
+    color: black;
+    font-weight: 600;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+}
+
+.btn-basic a {
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}
+
+.btn-basic:focus {
+    outline: 0;
+}
+
+.btn-basic:hover {
+    background-color: blanchedalmond;
+    border: 2px solid brown;
+}
