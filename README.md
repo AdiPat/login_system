@@ -6,8 +6,6 @@
 
 ## Repository Structure
 
-1. `bugs.txt`: List of bugs
-2. `todo.txt`: Tasks to complete
-3. `instructions.txt`: Assignment instructions
-4. `/backend`: Backend Code (Flask/Python)
-5. `/frontend`: Frontend Code (ReactJS)
+1. `instructions.txt`: Assignment instructions
+2. `/backend`: Backend Code (Flask/Python)
+3. `/frontend`: Frontend Code (ReactJS)
