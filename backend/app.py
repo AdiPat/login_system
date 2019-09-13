@@ -21,7 +21,7 @@ def api_login():
     error = None
     response_data = {'username_valid': False, 'login_valid': False}
     if request.method == 'POST':
-        print(request.form)
+        # print(request.form)
         username = request.form.get('username')
         password = request.form.get('password')
         username_valid, password_valid = is_login_valid(username, password)
@@ -33,7 +33,7 @@ def api_login():
         if username_valid and not(password_valid):
             response_data['username_valid'] = True
             response_data['login_valid'] = False
-    print(response_data)
+    # print(response_data)
     return jsonify(response_data)
 
 # GET: Returns boolean if token is valid
@@ -43,10 +43,10 @@ def api_hello():
         'status': False
     }
     if request.method == 'GET':
-        print(request.args)
+        # print(request.args)
         token = request.args.get('token')
         username = request.args.get('username')
-        print(token, username)
+        #print(token, username)
         if is_token_valid(username, token):
             response_data['status'] = True
     return jsonify(response_data)
